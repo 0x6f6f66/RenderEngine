@@ -9,9 +9,9 @@ import com.hideaway.RenderEngine.graphics.coordinates.Vertex;
 @Deprecated
 public class Something {
     private static final Mesh mesh = new Mesh();
-    private static final float a = 0.8f;
-    private static final float b = 0.2f;
-    private static final float c = 0.2f;
+    private static final double a = 0.8f;
+    private static final double b = 0.2f;
+    private static final double c = 0.2f;
 
     /*
             {c, a, b},
@@ -43,7 +43,7 @@ public class Something {
             {}
     */
 
-    public static float[][] vertices = {
+    public static double[][] vertices = {
 
     };
 

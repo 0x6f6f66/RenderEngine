@@ -1,5 +1,7 @@
 package com.hideaway.RenderEngine.graphics.coordinates;
 
+import java.awt.*;
+
 public class Triangle {
     private Vertex ver1;
     private Vertex ver2;

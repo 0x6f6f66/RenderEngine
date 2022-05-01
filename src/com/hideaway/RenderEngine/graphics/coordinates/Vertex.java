@@ -2,58 +2,70 @@ package com.hideaway.RenderEngine.graphics.coordinates;
 
 import com.hideaway.RenderEngine.graphics.coordinates.matricies.Matrix;
 
+import java.awt.*;
+
 /**
- * Vertex is a collection of 3 float coordinates: x, y, z.
+ * Vertex is a collection of 3 double coordinates: x, y, z.
  * */
 public class Vertex {
-    public float x;
-    public float y;
-    public float z;
-    @Deprecated
-    public float[] vec3d;
+    public double x;
+    public double y;
+    private double z;
+    private Color color = Color.YELLOW;
 
-    public Vertex(float x, float y, float z){
+    public Vertex(double x, double y, double z){
         this.x = x;
         this.y = y;
         this.z = z;
-        //this.vec3d = new float[]{x,y,z};
     }
 
-    public Vertex(float... vertices){
+    //temp color Testing
+    public Vertex(double x, double y, double z, Color color){
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.color = color;
+    }
+
+    public Vertex(double... vertices){
         this.x = vertices[0];
         this.y = vertices[1];
         this.z = vertices[2];
-        //this.vec3d = new float[]{vertices[0], vertices[1], vertices[2]};
     }
 
     public Vertex(){
-        //this.vec3d = new float[3];
     }
 
-    public void setX(float x){
+    public void setX(double x){
         this.x = x;
-        //this.vec3d[0] = x;
     }
 
-    public void setY(float y){
+    public void setY(double y){
         this.y = y;
-        //this.vec3d[1] = y;
     }
 
-    public void setZ(float z){
+    public void setZ(double z){
         this.z = z;
-        //this.vec3d[2] = z;
     }
 
-    public float getX(){
+    public double getX(){
         return this.x;
     }
 
-    public float getY(){
+    public double getY(){
         return this.y;
     }
-    public float getZ(){
+
+    public double getZ(){
         return this.z;
+    }
+
+    public void setColor(Color color){
+        this.color = color;
+    }
+
+    public Color getColor(){
+        return this.color;
     }
 
     /**
@@ -73,7 +85,7 @@ public class Vertex {
         output.setY(input.x * matrix.mat4x4[0][1] + input.y * matrix.mat4x4[1][1] + input.z * matrix.mat4x4[2][1] + matrix.mat4x4[3][1]);
         output.setZ(input.x * matrix.mat4x4[0][2] + input.y * matrix.mat4x4[1][2] + input.z * matrix.mat4x4[2][2] + matrix.mat4x4[3][2]);
         //Fourth, imaginary variable w.
-        float w = (input.x * matrix.mat4x4[0][3] + input.y * matrix.mat4x4[1][3] + input.z * matrix.mat4x4[2][3] + matrix.mat4x4[3][3]);
+        double w = (input.x * matrix.mat4x4[0][3] + input.y * matrix.mat4x4[1][3] + input.z * matrix.mat4x4[2][3] + matrix.mat4x4[3][3]);
         //Transformation into cartesian space.
         if (w != 0.0f){
             output.setX(output.x/w);

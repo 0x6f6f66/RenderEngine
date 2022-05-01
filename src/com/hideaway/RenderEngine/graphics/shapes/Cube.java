@@ -13,7 +13,7 @@ import com.hideaway.RenderEngine.graphics.coordinates.Vertex;
 public class Cube {
     private static final Mesh cubeMesh = new Mesh();
 
-    public static float[][] vertices = {
+    public static double[][] vertices = {
             /*
             The cube gets rendered in the sequence each side is presented. I have not chosen a particular
             for this cube, but that may be needed to be addressed later. Each side consists of 2 triangles,

@@ -14,11 +14,11 @@ import com.hideaway.RenderEngine.graphics.render.figures.FigureTwo;
 
 public class CubeTwo {
     private static final Mesh cubeMesh = new Mesh();
-    private static final float a = 1.3f; //Manually change the X coordinate
-    private static final float b = 1.3f; //Manually change the Y coordinate
+    private static final float a = 10.3f; //Manually change the X coordinate
+    private static final float b = 10.3f; //Manually change the Y coordinate
     private static final float c = 0f; //Manually change the Z coordinate
 
-    public static float[][] vertices = {
+    public static double[][] vertices = {
             //front
             {-0.5f+a, 0.5f+b, -0.5f+c}, {-0.5f+a, -0.5f+b, -0.5f+c}, {0.5f+a, -0.5f+b, -0.5f+c},
             {-0.5f+a, 0.5f+b, -0.5f+c}, {0.5f+a, -0.5f+b, -0.5f+c}, {0.5f+a, 0.5f+b, -0.5f+c},

@@ -1,22 +1,36 @@
 package com.hideaway.RenderEngine;
 
 import com.hideaway.RenderEngine.graphics.render.Renderable;
+import com.hideaway.RenderEngine.graphics.render.figures.Figure;
+import com.hideaway.RenderEngine.graphics.render.figures.FigureTwo;
+import com.hideaway.RenderEngine.graphics.shapes.Cube;
+import com.hideaway.RenderEngine.graphics.shapes.CubeTwo;
+import com.hideaway.RenderEngine.graphics.shapes.Icosahedron;
 import com.hideaway.RenderEngine.util.Handler;
+import com.hideaway.RenderEngine.util.KeyManager;
 import com.hideaway.RenderEngine.util.Window;
 
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferStrategy;
+import java.security.Key;
 import java.util.concurrent.TimeUnit;
 
 public class RenderEngine extends Canvas implements Runnable {
-    public static final int width =750;
-    public static final int height = 750;
+    public static final int width = 1400;
+    public static final int height = 800;
     public final String title = "Render Engine o.o";
+    private Figure figure;
 
     public RenderEngine(){
+        addKeyListener(new KeyManager(this));
         //Creates a new game window with a set width, height and title.
         new Window(width, height, title, this);
+
+        //Add figure we want to render
+        this.figure = new Figure(Icosahedron.getMesh());
+        new Figure(CubeTwo.getMesh());
 
         //this starts the main game loop, and we cant add objects to render AFTER the game loop has started.
         run();
@@ -25,15 +39,15 @@ public class RenderEngine extends Canvas implements Runnable {
     /**
      * Main Game loop.
      */
-    //Currently a simple while loop, but could be imporved to an actual gam loop.
+    //Currently a simple while loop, but could be imporved to an actual game loop.
     @Override
     public void run() {
         while(true){
             try {
                 render();
                 tick();
-                TimeUnit.MILLISECONDS.sleep(0); // Temp sleep function
-            } catch (InterruptedException e) {
+                TimeUnit.MILLISECONDS.sleep(100); // Temp sleep function
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -47,6 +61,18 @@ public class RenderEngine extends Canvas implements Runnable {
     public  void tick(){
         Handler.tick();
     }
+
+    public void keyPressed(KeyEvent e){
+        this.figure.keyPressed(e);
+    }
+
+    /**
+     * Currently not being used
+     * */
+    public void keyReleased(KeyEvent e){
+
+    }
+
 
     /**
      * Render method, invokes Handler.render() which invokes each render() method of a Renderable object.
