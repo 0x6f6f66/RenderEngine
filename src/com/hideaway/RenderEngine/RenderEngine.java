@@ -46,7 +46,6 @@ public class RenderEngine extends Canvas implements Runnable {
             try {
                 render();
                 tick();
-                TimeUnit.MILLISECONDS.sleep(100); // Temp sleep function
             } catch (Exception e) {
                 e.printStackTrace();
             }
