@@ -1,12 +1,10 @@
 package com.hideaway.RenderEngine;
 
-import com.hideaway.RenderEngine.graphics.render.Renderable;
-import com.hideaway.RenderEngine.graphics.render.figures.Figure;
-import com.hideaway.RenderEngine.graphics.render.figures.FigureTwo;
-import com.hideaway.RenderEngine.graphics.shapes.Cube;
-import com.hideaway.RenderEngine.graphics.shapes.CubeTwo;
-import com.hideaway.RenderEngine.graphics.shapes.Icosahedron;
-import com.hideaway.RenderEngine.util.Handler;
+import com.hideaway.RenderEngine.render.Renderable;
+import com.hideaway.RenderEngine.render.figures.Figure;
+import com.hideaway.RenderEngine.shapes.CubeTwo;
+import com.hideaway.RenderEngine.shapes.Icosahedron;
+import com.hideaway.RenderEngine.util.RenderHandler;
 import com.hideaway.RenderEngine.util.KeyManager;
 import com.hideaway.RenderEngine.util.Window;
 
@@ -14,8 +12,6 @@ import com.hideaway.RenderEngine.util.Window;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferStrategy;
-import java.security.Key;
-import java.util.concurrent.TimeUnit;
 
 public class RenderEngine extends Canvas implements Runnable {
     public static final int width = 1400;
@@ -39,7 +35,7 @@ public class RenderEngine extends Canvas implements Runnable {
     /**
      * Main Game loop.
      */
-    //Currently a simple while loop, but could be imporved to an actual game loop.
+    //Currently, a simple while loop, but could be improved to an actual game loop.
     @Override
     public void run() {
         while(true){
@@ -53,12 +49,12 @@ public class RenderEngine extends Canvas implements Runnable {
     }
 
     /**
-     *  Tick method, invokes Handler.tick() which invokes each tick() method of a Renderable object.
-     * @see Handler
+     *  Tick method, invokes RenderHandler.tick() which invokes each tick() method of a Renderable object.
+     * @see RenderHandler
      * @see Renderable
      */
     public  void tick(){
-        Handler.tick();
+        RenderHandler.tick();
     }
 
     public void keyPressed(KeyEvent e){
@@ -69,13 +65,11 @@ public class RenderEngine extends Canvas implements Runnable {
      * Currently not being used
      * */
     public void keyReleased(KeyEvent e){
-
     }
 
-
     /**
-     * Render method, invokes Handler.render() which invokes each render() method of a Renderable object.
-     * @see Handler
+     * Render method, invokes RenderHandler.render() which invokes each render() method of a Renderable object.
+     * @see RenderHandler
      * @see Renderable
      */
     public void render(){
@@ -89,7 +83,7 @@ public class RenderEngine extends Canvas implements Runnable {
         Graphics graphics = bs.getDrawGraphics();
         graphics.setColor(Color.BLACK);
         graphics.fillRect(0,0,width,height);
-        Handler.render(graphics);
+        RenderHandler.render(graphics);
         graphics.dispose();
         bs.show();
     }

@@ -5,7 +5,7 @@ import com.hideaway.RenderEngine.render.Renderable;
 import java.awt.*;
 import java.util.LinkedList;
 
-public class Handler {
+public class RenderHandler {
     public static LinkedList<Renderable> RenderList = new LinkedList<>();
 
     //Invokes tick() method of each Renderable object that has been put in a RenderList

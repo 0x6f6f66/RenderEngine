@@ -1,6 +1,6 @@
-package com.hideaway.RenderEngine.graphics.coordinates;
+package com.hideaway.RenderEngine.coordinates;
 
-import com.hideaway.RenderEngine.graphics.coordinates.matricies.Matrix;
+import com.hideaway.RenderEngine.coordinates.matricies.Matrix;
 
 import java.awt.*;
 
@@ -94,5 +94,4 @@ public class Vertex {
         }
         return output;
     }
-
 }

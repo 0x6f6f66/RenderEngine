@@ -1,9 +1,8 @@
 package com.hideaway.RenderEngine;
 
-import com.hideaway.RenderEngine.graphics.render.figures.Figure;
-import com.hideaway.RenderEngine.graphics.shapes.Cube;
-import com.hideaway.RenderEngine.graphics.coordinates.Mesh;
-import com.hideaway.RenderEngine.graphics.shapes.Icosahedron;
+import com.hideaway.RenderEngine.render.figures.Figure;
+import com.hideaway.RenderEngine.shapes.Cube;
+import com.hideaway.RenderEngine.coordinates.Mesh;
 
 /**
  * new Figure(); is a renderable object which accepts a mesh of values. Behaviour of the mesh of values is defined

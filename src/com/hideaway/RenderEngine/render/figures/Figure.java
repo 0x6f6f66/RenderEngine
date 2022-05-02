@@ -1,12 +1,13 @@
-package com.hideaway.RenderEngine.graphics.render.figures;
+package com.hideaway.RenderEngine.render.figures;
 
 import com.hideaway.RenderEngine.RenderEngine;
-import com.hideaway.RenderEngine.graphics.coordinates.Mesh;
-import com.hideaway.RenderEngine.graphics.coordinates.Triangle;
-import com.hideaway.RenderEngine.graphics.coordinates.Vertex;
-import com.hideaway.RenderEngine.graphics.coordinates.matricies.*;
-import com.hideaway.RenderEngine.graphics.render.Renderable;
-import com.hideaway.RenderEngine.util.Handler;
+import com.hideaway.RenderEngine.coordinates.Mesh;
+import com.hideaway.RenderEngine.coordinates.Triangle;
+import com.hideaway.RenderEngine.coordinates.Vertex;
+import com.hideaway.RenderEngine.coordinates.matricies.*;
+import com.hideaway.RenderEngine.render.Renderable;
+import com.hideaway.RenderEngine.util.RenderHandler;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.LinkedList;
@@ -18,7 +19,7 @@ public class Figure implements Renderable {
     private static double yOffset = 0.0d;
 
     public Figure(Mesh mesh){
-        Handler.RenderList.add(this); //adds this to be rendered by the rendered
+        RenderHandler.RenderList.add(this); //adds this to be rendered by the rendered
         this.mesh = mesh;
     }
 
@@ -34,7 +35,7 @@ public class Figure implements Renderable {
      * Get's called on every render update.
      * */
     @Override
-    public void render(Graphics graphics) {
+    public void render(Graphics graphics){
         draw(mesh, graphics);
     }
 
@@ -121,7 +122,6 @@ public class Figure implements Renderable {
     }
 
     public void keyReleased(KeyEvent e){
-
     }
 
     //Actually draw the thing (temp)

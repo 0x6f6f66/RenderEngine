@@ -1,4 +1,4 @@
-package com.hideaway.RenderEngine.graphics.coordinates.matricies;
+package com.hideaway.RenderEngine.coordinates.matricies;
 
 public class RotationMatrixZ extends RotationMatrix {
     public static double fTheta = 0.0d;

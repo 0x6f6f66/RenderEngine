@@ -1,8 +1,8 @@
-package com.hideaway.RenderEngine.graphics.shapes;
+package com.hideaway.RenderEngine.shapes;
 
-import com.hideaway.RenderEngine.graphics.coordinates.Mesh;
-import com.hideaway.RenderEngine.graphics.coordinates.Triangle;
-import com.hideaway.RenderEngine.graphics.coordinates.Vertex;
+import com.hideaway.RenderEngine.coordinates.Mesh;
+import com.hideaway.RenderEngine.coordinates.Triangle;
+import com.hideaway.RenderEngine.coordinates.Vertex;
 
 public class Icosahedron {
     private static final Mesh icoMesh = new Mesh();

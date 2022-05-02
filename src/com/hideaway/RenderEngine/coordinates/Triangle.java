@@ -1,6 +1,4 @@
-package com.hideaway.RenderEngine.graphics.coordinates;
-
-import java.awt.*;
+package com.hideaway.RenderEngine.coordinates;
 
 public class Triangle {
     private Vertex ver1;

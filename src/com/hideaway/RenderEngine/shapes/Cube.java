@@ -1,8 +1,8 @@
-package com.hideaway.RenderEngine.graphics.shapes;
+package com.hideaway.RenderEngine.shapes;
 
-import com.hideaway.RenderEngine.graphics.coordinates.Mesh;
-import com.hideaway.RenderEngine.graphics.coordinates.Triangle;
-import com.hideaway.RenderEngine.graphics.coordinates.Vertex;
+import com.hideaway.RenderEngine.coordinates.Mesh;
+import com.hideaway.RenderEngine.coordinates.Triangle;
+import com.hideaway.RenderEngine.coordinates.Vertex;
 
 /**
  * This is a static Cube which is not changeable, and is used purely for testing purposes. All the coordinates

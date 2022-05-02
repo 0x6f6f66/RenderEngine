@@ -1,4 +1,4 @@
-package com.hideaway.RenderEngine.graphics.render;
+package com.hideaway.RenderEngine.render;
 
 import java.awt.*;
 

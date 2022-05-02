@@ -1,4 +1,4 @@
-package com.hideaway.RenderEngine.graphics.coordinates.matricies;
+package com.hideaway.RenderEngine.coordinates.matricies;
 
 import com.hideaway.RenderEngine.RenderEngine;
 

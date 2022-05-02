@@ -1,9 +1,9 @@
-package com.hideaway.RenderEngine.graphics.shapes;
+package com.hideaway.RenderEngine.shapes;
 
-import com.hideaway.RenderEngine.graphics.coordinates.Mesh;
-import com.hideaway.RenderEngine.graphics.coordinates.Triangle;
-import com.hideaway.RenderEngine.graphics.coordinates.Vertex;
-import com.hideaway.RenderEngine.graphics.render.figures.FigureTwo;
+import com.hideaway.RenderEngine.coordinates.Mesh;
+import com.hideaway.RenderEngine.coordinates.Triangle;
+import com.hideaway.RenderEngine.coordinates.Vertex;
+import com.hideaway.RenderEngine.render.figures.FigureTwo;
 
 /**
  * This is a temporary class made for debugging, but the mesh is also usable.

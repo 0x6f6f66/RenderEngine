@@ -1,13 +1,14 @@
-package com.hideaway.RenderEngine.graphics.render.figures;
+package com.hideaway.RenderEngine.render.figures;
 
 import com.hideaway.RenderEngine.RenderEngine;
-import com.hideaway.RenderEngine.graphics.coordinates.Mesh;
-import com.hideaway.RenderEngine.graphics.coordinates.Triangle;
-import com.hideaway.RenderEngine.graphics.coordinates.Vertex;
-import com.hideaway.RenderEngine.graphics.coordinates.matricies.ProjectionMatrix;
-import com.hideaway.RenderEngine.graphics.coordinates.matricies.RotationMatrixZ;
-import com.hideaway.RenderEngine.graphics.render.Renderable;
-import com.hideaway.RenderEngine.util.Handler;
+import com.hideaway.RenderEngine.coordinates.Mesh;
+import com.hideaway.RenderEngine.coordinates.Triangle;
+import com.hideaway.RenderEngine.coordinates.Vertex;
+import com.hideaway.RenderEngine.coordinates.matricies.ProjectionMatrix;
+import com.hideaway.RenderEngine.coordinates.matricies.RotationMatrixZ;
+import com.hideaway.RenderEngine.render.Renderable;
+import com.hideaway.RenderEngine.util.RenderHandler;
+
 import java.awt.*;
 import java.util.LinkedList;
 
@@ -15,11 +16,12 @@ import java.util.LinkedList;
  * This is a temporary class to test how two objects with differently defined tick() and render() methods behave
  * alongside each other.
  * */
+@Deprecated
 public class FigureTwo implements Renderable {
     public Mesh mesh;
 
     public FigureTwo(Mesh mesh){
-        Handler.RenderList.add(this); //adds this to be rendered by the rendered
+        RenderHandler.RenderList.add(this); //adds this to be rendered by the rendered
         this.mesh = mesh;
     }
 

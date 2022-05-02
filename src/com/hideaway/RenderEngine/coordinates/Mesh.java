@@ -1,4 +1,4 @@
-package com.hideaway.RenderEngine.graphics.coordinates;
+package com.hideaway.RenderEngine.coordinates;
 
 import java.util.LinkedList;
 

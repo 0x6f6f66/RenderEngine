@@ -1,4 +1,4 @@
-package com.hideaway.RenderEngine.graphics.coordinates.matricies;
+package com.hideaway.RenderEngine.coordinates.matricies;
 
 /**The Matrix defines a 4x4 matrix (which is essentially a nested 4x4 array). We have a static component projection,
  * which is a constant projection matrix that allows us to transform vertices in regards to our perspective.
