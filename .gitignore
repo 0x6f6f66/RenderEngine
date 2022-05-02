@@ -1,4 +1,4 @@
 .idea/**
-out/
-*.iml
+out/**
 **/.DS_Store
+RenderEngine.iml
