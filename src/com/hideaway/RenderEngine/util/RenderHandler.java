@@ -1,6 +1,6 @@
 package com.hideaway.RenderEngine.util;
 
-import com.hideaway.RenderEngine.graphics.render.Renderable;
+import com.hideaway.RenderEngine.render.Renderable;
 
 import java.awt.*;
 import java.util.LinkedList;

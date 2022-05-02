@@ -84,7 +84,6 @@ public class FigureTwo implements Renderable {
 
     private static void drawTriangle(LinkedList<Triangle> triangles, Graphics graphics){
         for (Triangle triangle: triangles){
-
             //graphics.setColor(Color.white);
             //graphics.fillPolygon(new int [] {(int) triangle.ver1.x, (int) triangle.ver2.x, (int) triangle.ver3.x}, new int[] {(int) triangle.ver1.y, (int) triangle.ver2.y, (int) triangle.ver3.y}, 3);
             graphics.setColor(Color.RED);

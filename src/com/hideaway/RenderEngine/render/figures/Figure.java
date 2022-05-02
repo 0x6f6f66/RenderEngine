@@ -184,8 +184,6 @@ public class Figure implements Renderable {
                 triTranslated.getVer3().setColor(color2);
             }
 
-
-
             //Offset x
             triTranslated.getVer1().setX(triTranslated.getVer1().getX() + xOffset);
             triTranslated.getVer2().setX(triTranslated.getVer2().getX() + xOffset);
@@ -195,7 +193,6 @@ public class Figure implements Renderable {
             triTranslated.getVer1().setY(triTranslated.getVer1().getY() + yOffset);
             triTranslated.getVer2().setY(triTranslated.getVer2().getY() + yOffset);
             triTranslated.getVer3().setY(triTranslated.getVer3().getY() + yOffset);
-
 
             Triangle triProjected = new Triangle(
                     Vertex.MultiplyMatrixVector(triTranslated.getVer1(), new ProjectionMatrix()),
@@ -226,11 +223,11 @@ public class Figure implements Renderable {
 
             trianglesScaled.add(triProjected);
         }
-        drawTriangle(trianglesScaled, graphics);
+        drawTriangles(trianglesScaled, graphics);
     }
 
     //This will actually draw the triangles onto the screen using graphics.drawLine()
-    private static void drawTriangle(LinkedList<Triangle> triangles, Graphics graphics){
+    private static void drawTriangles(LinkedList<Triangle> triangles, Graphics graphics){
         for (Triangle triangle: triangles){
             graphics.setColor(triangle.getVer1().getColor());
             graphics.drawLine((int) triangle.getVer1().x, (int) triangle.getVer1().y, (int) triangle.getVer2().x, (int) triangle.getVer2().y);

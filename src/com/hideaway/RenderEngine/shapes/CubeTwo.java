@@ -14,9 +14,9 @@ import com.hideaway.RenderEngine.graphics.render.figures.FigureTwo;
 
 public class CubeTwo {
     private static final Mesh cubeMesh = new Mesh();
-    private static final float a = 10.3f; //Manually change the X coordinate
-    private static final float b = 10.3f; //Manually change the Y coordinate
-    private static final float c = 0f; //Manually change the Z coordinate
+    private static final double a = 10.3f; //Manually change the X coordinate
+    private static final double b = 10.3f; //Manually change the Y coordinate
+    private static final double c = 0f; //Manually change the Z coordinate
 
     public static double[][] vertices = {
             //front
